@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Figma UI/UX Design Training 2026 | JustAcademy Delhi & Online</title>
+  <meta name="description" content="Master Figma for UI/UX design in 2026. Learn wireframing, prototyping, auto layout, design systems, and real-world product design. Live training in Delhi and globally online via JustAcademy." />
+  <meta name="keywords" content="Figma Training 2026, UI UX Design Course, Figma Course Delhi, Wireframing, Prototyping, Design Systems, JustAcademy Figma" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="JustAcademy" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Figma UI/UX Design Training 2026 | JustAcademy" />
+  <meta property="og:description" content="Master Figma, wireframing, prototyping and design systems. Live training in Delhi and globally online." />
+  <meta property="og:url" content="https://www.justacademy.co/course-detail/figma-training" />
+  <meta property="og:site_name" content="JustAcademy" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Figma UI/UX Design Training 2026 | JustAcademy" />
+  <meta name="twitter:description" content="Master Figma, wireframing, prototyping and design systems. Live training in Delhi and globally online." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Figma UI/UX Design Training 2026",
+    "description": "Comprehensive Figma training covering wireframing, prototyping, auto layout, components, design systems, and real product design for mobile and web.",
+    "provider": { "@type": "Organization", "name": "JustAcademy", "sameAs": "https://www.justacademy.co" },
+    "url": "https://www.justacademy.co/course-detail/figma-training",
+    "hasCourseInstance": [
+      { "@type": "CourseInstance", "name": "Figma Training Online Global", "courseMode": "Online" },
+      { "@type": "CourseInstance", "name": "Figma Training Delhi Online", "courseMode": "Online" }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700;800&family=Instrument+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* Figma brand-inspired palette */
+      --fig-purple: #9b51e0;
+      --fig-pink:   #f24e1e;
+      --fig-orange: #ff7262;
+      --fig-green:  #1bc47d;
+      --fig-blue:   #0acf83;
+      --fig-dark:   #0d0d0d;
+
+      /* Surface — warm off-white / cream */
+      --bg:    #faf9f7;
+      --bg2:   #f3f0eb;
+      --bg3:   #ede9e2;
+      --card:  #ffffff;
+      --bdr:   rgba(0,0,0,.08);
+      --bdr-h: rgba(155,81,224,.3);
+
+      /* Text */
+      --t1: #1a1410;
+      --t2: #5a5248;
+      --t3: #9c958c;
+
+      /* Gradients */
+      --grad:  linear-gradient(135deg, #9b51e0 0%, #f24e1e 50%, #ff7262 100%);
+      --grad2: linear-gradient(135deg, #9b51e0 0%, #6b2fa0 100%);
+      --grad3: linear-gradient(135deg, #f24e1e 0%, #ff7262 100%);
+      --grad4: linear-gradient(135deg, #0acf83 0%, #1bc47d 100%);
+
+      --shadow:   0 1px 3px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
+      --shadow-h: 0 8px 40px rgba(155,81,224,.18);
+
+      --font: 'Bricolage Grotesque', sans-serif;
+      --mono: 'Instrument Mono', monospace;
+      --r:  18px;
+      --rs: 12px;
+      --ease: cubic-bezier(.4,0,.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--t1);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg2); }
+    ::-webkit-scrollbar-thumb { background: var(--fig-purple); border-radius: 3px; }
+
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .sec  { padding: 100px 0; }
+    .sec-alt { background: var(--bg2); }
+    .sec-dark {
+      background: var(--fig-dark);
+      color: #f5f3f0;
+    }
+
+    /* ── REVEAL ── */
+    .rv { opacity:0; transform:translateY(26px); transition:opacity .65s var(--ease),transform .65s var(--ease); }
+    .rv.on { opacity:1; transform:none; }
+    .d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}.d4{transition-delay:.32s;}
+
+    /* ── EYEBROW ── */
+    .eye {
+      display:inline-flex; align-items:center; gap:8px;
+      font-family:var(--mono); font-size:.68rem; font-weight:500;
+      letter-spacing:.14em; text-transform:uppercase;
+      color:var(--fig-purple); background:rgba(155,81,224,.07);
+      border:1.5px solid rgba(155,81,224,.18);
+      padding:5px 14px; border-radius:100px; margin-bottom:18px;
+    }
+    .eye::before { content:'◈'; font-size:.55rem; }
+
+    h2.ttl { font-size:clamp(2rem,4vw,2.9rem); font-weight:800; line-height:1.1; letter-spacing:-.025em; margin-bottom:14px; }
+    h2.ttl em { font-style:normal; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .sub { color:var(--t2); font-size:1rem; max-width:560px; margin-bottom:52px; line-height:1.8; }
+
+    /* ── NAV ── */
+    nav {
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      background:rgba(250,249,247,.92); backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--bdr); padding:14px 0;
+      transition:box-shadow .3s;
+    }
+    .nav-row { display:flex; align-items:center; justify-content:space-between; }
+    .logo {
+      font-family:var(--font); font-size:.95rem; font-weight:800;
+      text-decoration:none; color:var(--t1); display:flex; align-items:center; gap:10px;
+    }
+    .logo-icon {
+      width:28px; height:28px; border-radius:8px;
+      background:var(--grad); display:flex; align-items:center; justify-content:center;
+      font-size:.9rem; color:#fff;
+    }
+    .nav-cta {
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--t1); color:#fff; font-family:var(--font);
+      font-size:.82rem; font-weight:700; padding:9px 22px;
+      border-radius:100px; text-decoration:none;
+      transition:all .25s; box-shadow:0 4px 14px rgba(0,0,0,.2);
+    }
+    .nav-cta:hover { background:var(--fig-dark); transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.3); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height:100vh; display:flex; align-items:center;
+      padding-top:80px; position:relative; overflow:hidden;
+      background: var(--bg);
+    }
+
+    /* scattered colour blobs — Figma logo colours */
+    .blob {
+      position:absolute; border-radius:50%;
+      filter:blur(72px); pointer-events:none;
+      animation:drift 10s ease-in-out infinite alternate;
+    }
+    .blob-1 { width:480px; height:480px; top:-15%; right:-8%; background:rgba(155,81,224,.14); animation-duration:12s; }
+    .blob-2 { width:320px; height:320px; bottom:5%; left:-6%; background:rgba(242,78,30,.1); animation-duration:9s; animation-delay:-4s; }
+    .blob-3 { width:200px; height:200px; top:40%; left:35%; background:rgba(10,207,131,.08); animation-duration:7s; animation-delay:-2s; }
+    @keyframes drift { from{transform:translate(0,0) scale(1);} to{transform:translate(3%,4%) scale(1.08);} }
+
+    /* canvas dots scattered */
+    .hero-canvas {
+      position:absolute; right:0; top:0; width:52%; height:100%;
+      pointer-events:none; z-index:0;
+    }
+    .canvas-inner {
+      position:relative; width:100%; height:100%;
+      background-image: radial-gradient(rgba(155,81,224,.18) 1.5px, transparent 1.5px);
+      background-size: 28px 28px;
+      mask-image: radial-gradient(ellipse 65% 70% at 70% 50%, black 25%, transparent 75%);
+      opacity:.55;
+    }
+
+    /* floating UI frames */
+    .float-frames {
+      position:absolute; right:5%; top:50%; transform:translateY(-50%);
+      width:340px; pointer-events:none; z-index:2;
+    }
+    @media(max-width:960px){ .float-frames,.hero-canvas{display:none;} }
+
+    .ui-frame {
+      background:var(--card); border:1.5px solid var(--bdr);
+      border-radius:var(--r); box-shadow:var(--shadow);
+      padding:16px; position:absolute;
+      transition:transform 6s ease-in-out;
+    }
+    .uf-main {
+      width:280px; top:0; right:0;
+      animation:float-a 6s ease-in-out infinite;
+    }
+    .uf-mini {
+      width:180px; top:160px; left:-40px;
+      animation:float-b 7s ease-in-out infinite;
+    }
+    .uf-chip {
+      width:140px; top:300px; right:20px;
+      animation:float-c 5s ease-in-out infinite;
+    }
+    @keyframes float-a { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes float-b { 0%,100%{transform:translateY(0) rotate(-2deg);} 50%{transform:translateY(-8px) rotate(0deg);} }
+    @keyframes float-c { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);} }
+
+    .uf-bar { height:4px; border-radius:2px; margin-bottom:12px; background:var(--grad); width:60%; }
+    .uf-row { display:flex; gap:8px; margin-bottom:8px; align-items:center; }
+    .uf-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+    .uf-line { height:8px; border-radius:4px; background:var(--bg2); flex:1; }
+    .uf-line.s { width:55%; flex:none; }
+    .uf-rect { height:52px; border-radius:10px; background:var(--bg2); margin-bottom:8px; }
+    .uf-btns { display:flex; gap:6px; }
+    .uf-btn { height:28px; border-radius:8px; flex:1; }
+    .uf-btn.p { background:var(--grad); }
+    .uf-btn.s { background:var(--bg2); }
+    .uf-label { font-family:var(--mono); font-size:.62rem; color:var(--t3); margin-bottom:8px; }
+    .uf-avatar { width:36px; height:36px; border-radius:50%; background:var(--grad2); margin-bottom:8px; }
+    .uf-tag { display:inline-block; font-family:var(--mono); font-size:.6rem; color:#fff; background:var(--grad2); padding:3px 10px; border-radius:100px; }
+
+    /* hero left */
+    .hero-content { position:relative; z-index:2; max-width:620px; }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:10px;
+      font-family:var(--mono); font-size:.73rem; color:var(--fig-purple);
+      background:rgba(155,81,224,.07); border:1.5px solid rgba(155,81,224,.18);
+      padding:7px 18px; border-radius:100px; margin-bottom:28px;
+    }
+    .badge-ring {
+      width:10px; height:10px; border-radius:50%;
+      border:2px solid var(--fig-purple);
+      position:relative;
+    }
+    .badge-ring::after {
+      content:''; position:absolute; inset:2px;
+      border-radius:50%; background:var(--fig-purple);
+      animation:ring-pulse 2s ease-in-out infinite;
+    }
+    @keyframes ring-pulse { 0%,100%{transform:scale(1);opacity:1;} 50%{transform:scale(.5);opacity:.4;} }
+
+    h1 {
+      font-size:clamp(3rem,6vw,5.2rem); font-weight:800;
+      line-height:1.04; letter-spacing:-.04em; margin-bottom:20px;
+      color:var(--t1);
+    }
+    .h1-block { display:block; }
+    .h1-outline {
+      display:block;
+      -webkit-text-stroke:2px var(--t1);
+      color:transparent;
+    }
+    .h1-grad { display:block; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+
+    .hero-desc { font-size:1.08rem; color:var(--t2); max-width:500px; margin-bottom:36px; line-height:1.8; }
+    .hero-btns { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:52px; }
+
+    .btn-prim {
+      display:inline-flex; align-items:center; gap:9px;
+      background:var(--t1); color:#fff; font-family:var(--font);
+      font-size:.92rem; font-weight:700; padding:15px 32px;
+      border-radius:100px; text-decoration:none;
+      transition:all .28s var(--ease); box-shadow:0 8px 24px rgba(0,0,0,.2);
+    }
+    .btn-prim:hover { transform:translateY(-3px); box-shadow:0 16px 40px rgba(0,0,0,.3); background:var(--fig-dark); }
+    .btn-sec {
+      display:inline-flex; align-items:center; gap:9px;
+      background:transparent; border:1.5px solid var(--bdr);
+      color:var(--t1); font-family:var(--font); font-size:.92rem; font-weight:700;
+      padding:15px 32px; border-radius:100px; text-decoration:none;
+      transition:all .28s var(--ease);
+    }
+    .btn-sec:hover { border-color:var(--fig-purple); color:var(--fig-purple); transform:translateY(-3px); box-shadow:var(--shadow); }
+
+    .hero-stats { display:flex; flex-wrap:wrap; gap:36px; padding-top:36px; border-top:1.5px solid var(--bdr); }
+    .sv { font-size:1.9rem; font-weight:800; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .sl { font-family:var(--mono); font-size:.68rem; color:var(--t3); text-transform:uppercase; letter-spacing:.1em; margin-top:2px; }
+
+    /* ── CARD BASE ── */
+    .card {
+      background:var(--card); border:1.5px solid var(--bdr);
+      border-radius:var(--r); padding:30px;
+      transition:all .32s var(--ease); box-shadow:var(--shadow);
+    }
+    .card:hover { border-color:var(--bdr-h); transform:translateY(-5px); box-shadow:var(--shadow-h); }
+    .ci { width:50px; height:50px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:18px; background:var(--bg2); }
+    .ct { font-size:1rem; font-weight:700; margin-bottom:8px; color:var(--t1); }
+    .cx { color:var(--t2); font-size:.88rem; line-height:1.75; }
+
+    /* ── SEC 1: WHAT ── */
+    .g4 { display:grid; grid-template-columns:repeat(auto-fit,minmax(255px,1fr)); gap:20px; }
+
+    /* ── SEC 2: PROCESS ── */
+    .process-row {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:0; border:1.5px solid var(--bdr); border-radius:var(--r);
+      overflow:hidden; background:var(--card); box-shadow:var(--shadow);
+    }
+    .process-step {
+      padding:28px 22px; border-right:1px solid var(--bdr);
+      transition:all .3s; position:relative;
+    }
+    .process-step:last-child { border-right:none; }
+    .process-step:hover { background:rgba(155,81,224,.04); }
+    .ps-num {
+      font-family:var(--mono); font-size:.7rem; color:var(--t3);
+      margin-bottom:12px; letter-spacing:.1em;
+    }
+    .ps-icon { font-size:1.8rem; margin-bottom:12px; display:block; }
+    .ps-title { font-size:.9rem; font-weight:700; margin-bottom:6px; color:var(--t1); }
+    .ps-text  { color:var(--t2); font-size:.78rem; line-height:1.65; }
+    .ps-bar   { height:3px; border-radius:2px; margin-top:14px; }
+    .bar-1 { background:linear-gradient(90deg,#9b51e0,#7c3aed); }
+    .bar-2 { background:linear-gradient(90deg,#f24e1e,#ff7262); }
+    .bar-3 { background:linear-gradient(90deg,#0acf83,#1bc47d); }
+    .bar-4 { background:linear-gradient(90deg,#ff7262,#fbbf24); }
+    .bar-5 { background:linear-gradient(90deg,#3b82f6,#0acf83); }
+    @media(max-width:700px){
+      .process-row{grid-template-columns:1fr 1fr;}
+      .process-step{border-bottom:1px solid var(--bdr);}
+    }
+
+    /* ── SEC 3: ROADMAP ── */
+    .rm-outer { display:flex; justify-content:center; }
+    .rm-wrap  { display:flex; flex-direction:column; align-items:center; }
+    .rm-node {
+      min-width:250px; padding:14px 28px; text-align:center;
+      background:var(--card); border:1.5px solid var(--bdr);
+      border-radius:var(--rs); font-family:var(--mono); font-size:.82rem; font-weight:500;
+      transition:all .3s; cursor:default; opacity:0; transform:translateY(14px);
+      box-shadow:var(--shadow); color:var(--t1);
+    }
+    .rm-node:hover { border-color:rgba(155,81,224,.35); color:var(--fig-purple); background:rgba(155,81,224,.04); transform:scale(1.03); box-shadow:var(--shadow-h); }
+    .rm-conn { width:2px; height:26px; background:linear-gradient(to bottom,rgba(155,81,224,.5),rgba(155,81,224,.08)); position:relative; }
+    .rm-conn::after { content:'▼'; position:absolute; bottom:-7px; left:50%; transform:translateX(-50%); font-size:.6rem; color:var(--fig-purple); }
+
+    /* ── SEC 4: TOOLS ── */
+    .tools-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:14px; }
+    .tp {
+      background:var(--card); border:1.5px solid var(--bdr);
+      border-radius:var(--rs); padding:20px 12px; text-align:center;
+      transition:all .3s; cursor:default; box-shadow:var(--shadow);
+    }
+    .tp:hover { border-color:var(--bdr-h); transform:translateY(-4px); box-shadow:var(--shadow-h); }
+    .te { font-size:1.75rem; margin-bottom:8px; }
+    .tn { font-family:var(--mono); font-size:.75rem; font-weight:500; color:var(--t1); }
+    .tr { font-size:.67rem; color:var(--t3); margin-top:3px; }
+
+    /* ── SEC 5: PROJECTS ── */
+    .proj-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:22px; }
+    .proj {
+      background:var(--card); border:1.5px solid var(--bdr);
+      border-radius:var(--r); padding:30px;
+      transition:all .32s var(--ease); box-shadow:var(--shadow);
+      position:relative; overflow:hidden;
+    }
+    .proj-color-bar { position:absolute; top:0; left:0; right:0; height:4px; }
+    .proj:hover { border-color:var(--bdr-h); transform:translateY(-5px); box-shadow:var(--shadow-h); }
+    .pbadge {
+      display:inline-block; font-family:var(--mono); font-size:.68rem; font-weight:500;
+      color:var(--fig-purple); background:rgba(155,81,224,.08);
+      border:1px solid rgba(155,81,224,.18);
+      padding:3px 10px; border-radius:6px; margin-bottom:12px;
+    }
+    .pt { font-size:1rem; font-weight:700; margin-bottom:8px; color:var(--t1); }
+    .pd { color:var(--t2); font-size:.86rem; line-height:1.7; }
+    .ptags { display:flex; flex-wrap:wrap; gap:6px; margin-top:16px; }
+    .ptags span { background:var(--bg2); color:var(--t3); font-size:.68rem; font-family:var(--mono); padding:3px 8px; border-radius:5px; }
+
+    /* ── SEC 6: CAREER — bento grid ── */
+    .bento { display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:auto auto; gap:16px; }
+    @media(max-width:700px){ .bento{grid-template-columns:1fr;} }
+    .bento-cell {
+      background:var(--card); border:1.5px solid var(--bdr);
+      border-radius:var(--r); padding:28px; box-shadow:var(--shadow);
+      transition:all .3s;
+    }
+    .bento-cell:hover { border-color:var(--bdr-h); transform:translateY(-3px); box-shadow:var(--shadow-h); }
+    .bento-cell.wide { grid-column:span 2; }
+    .bento-cell.accent { background:var(--fig-dark); color:#f5f3f0; border-color:transparent; }
+    .bc-level {
+      display:inline-block; font-family:var(--mono); font-size:.65rem; font-weight:500;
+      letter-spacing:.08em; text-transform:uppercase; padding:2px 9px;
+      border-radius:4px; margin-bottom:10px;
+    }
+    .lv-e { background:rgba(27,196,125,.12); color:#059669; }
+    .lv-m { background:rgba(155,81,224,.1); color:var(--fig-purple); }
+    .lv-s { background:rgba(242,78,30,.1); color:var(--fig-pink); }
+    .lv-l { background:rgba(251,191,36,.1); color:#b45309; }
+    .bc-role { font-size:1.05rem; font-weight:800; margin-bottom:6px; }
+    .bc-desc { font-size:.84rem; line-height:1.65; }
+    .bc-desc-light { color:rgba(245,243,240,.6); }
+    .bc-sal {
+      font-family:var(--mono); font-size:1.8rem; font-weight:500;
+      background:var(--grad); -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent; background-clip:text;
+      margin-top:8px;
+    }
+
+    /* ── BLOG ── */
+    .blog-wrap {
+      background:var(--card); border:1.5px solid var(--bdr);
+      border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow);
+      display:grid; grid-template-columns:1fr 280px;
+    }
+    @media(max-width:760px){ .blog-wrap{grid-template-columns:1fr;} .blog-side{display:none;} }
+    .blog-main { padding:48px; position:relative; }
+    .blog-main::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:var(--grad); }
+    .blog-chip {
+      display:inline-flex; align-items:center; gap:6px;
+      font-family:var(--mono); font-size:.7rem; color:var(--fig-purple);
+      background:rgba(155,81,224,.08); border:1px solid rgba(155,81,224,.18);
+      padding:4px 12px; border-radius:6px; margin-bottom:16px;
+    }
+    .blog-h { font-size:clamp(1.15rem,2.5vw,1.55rem); font-weight:800; line-height:1.28; margin-bottom:12px; color:var(--t1); }
+    .blog-p { color:var(--t2); font-size:.91rem; line-height:1.8; margin-bottom:18px; }
+    .blog-meta { font-family:var(--mono); font-size:.7rem; color:var(--t3); margin-bottom:22px; }
+    .blog-side {
+      background:var(--bg2); border-left:1.5px solid var(--bdr);
+      display:flex; flex-direction:column; align-items:center;
+      justify-content:center; padding:36px; text-align:center; gap:14px;
+    }
+    .blog-icon { font-size:3.8rem; }
+    .blog-tag  { font-family:var(--mono); font-size:.68rem; color:var(--t3); }
+
+    /* ── FAQ ── */
+    .faq-stack { display:flex; flex-direction:column; gap:10px; }
+    .faq-item {
+      background:var(--card); border:1.5px solid var(--bdr);
+      border-radius:var(--rs); overflow:hidden; transition:border-color .3s;
+      box-shadow:var(--shadow);
+    }
+    .faq-item.open { border-color:rgba(155,81,224,.3); }
+    .faq-btn {
+      width:100%; display:flex; justify-content:space-between; align-items:center;
+      padding:20px 26px; cursor:pointer; background:none; border:none;
+      color:var(--t1); font-family:var(--font); font-size:.92rem; font-weight:600;
+      text-align:left; transition:color .3s; gap:16px;
+    }
+    .faq-item.open .faq-btn { color:var(--fig-purple); }
+    .faq-ico {
+      width:26px; height:26px; border-radius:7px; flex-shrink:0;
+      background:rgba(155,81,224,.07); border:1px solid rgba(155,81,224,.18);
+      display:flex; align-items:center; justify-content:center;
+      font-family:var(--mono); font-size:.85rem; color:var(--fig-purple);
+      transition:transform .35s, background .3s;
+    }
+    .faq-item.open .faq-ico { transform:rotate(45deg); background:rgba(155,81,224,.15); }
+    .faq-body {
+      max-height:0; overflow:hidden; padding:0 26px;
+      color:var(--t2); font-size:.9rem; line-height:1.8;
+      transition:max-height .44s var(--ease), padding .35s;
+    }
+    .faq-item.open .faq-body { max-height:360px; padding:0 26px 20px; }
+
+    /* ── CTA ── */
+    .cta-sec {
+      background:var(--fig-dark); color:#f5f3f0;
+      position:relative; overflow:hidden;
+    }
+    .cta-glow {
+      position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none;
+    }
+    .cta-glow-a { width:500px; height:500px; top:-20%; left:-10%; background:rgba(155,81,224,.18); }
+    .cta-glow-b { width:400px; height:400px; bottom:-20%; right:-8%; background:rgba(242,78,30,.14); }
+    .cta-inner { text-align:center; position:relative; z-index:2; }
+    .cta-h { font-size:clamp(2rem,4vw,3.2rem); font-weight:900; letter-spacing:-.03em; margin-bottom:14px; color:#fff; }
+    .cta-h em { font-style:normal; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .cta-sub { color:rgba(245,243,240,.6); font-size:1rem; margin-bottom:38px; }
+    .cta-btns { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; }
+    .btn-cta-prim {
+      display:inline-flex; align-items:center; gap:9px;
+      background:var(--grad); color:#fff; font-family:var(--font);
+      font-size:.92rem; font-weight:700; padding:15px 32px;
+      border-radius:100px; text-decoration:none;
+      transition:all .28s var(--ease); box-shadow:0 8px 24px rgba(155,81,224,.4);
+    }
+    .btn-cta-prim:hover { transform:translateY(-3px); box-shadow:0 16px 40px rgba(155,81,224,.55); }
+    .btn-cta-sec {
+      display:inline-flex; align-items:center; gap:9px;
+      background:transparent; border:1.5px solid rgba(255,255,255,.2);
+      color:#fff; font-family:var(--font); font-size:.92rem; font-weight:600;
+      padding:15px 32px; border-radius:100px; text-decoration:none;
+      transition:all .28s var(--ease);
+    }
+    .btn-cta-sec:hover { border-color:rgba(255,255,255,.5); transform:translateY(-3px); }
+    .cta-note { margin-top:22px; font-family:var(--mono); font-size:.74rem; color:rgba(245,243,240,.35); }
+
+    /* ── FOOTER ── */
+    footer { background:var(--fig-dark); color:rgba(245,243,240,.6); padding:60px 0 28px; border-top:1px solid rgba(255,255,255,.07); }
+    .ft-grid { display:grid; grid-template-columns:2fr 1fr 1fr; gap:48px; margin-bottom:44px; }
+    @media(max-width:700px){ .ft-grid{grid-template-columns:1fr;gap:32px;} }
+    .ft-brand { font-family:var(--font); font-size:1rem; font-weight:800; color:#fff; margin-bottom:12px; display:flex; align-items:center; gap:10px; }
+    .ft-logo-icon { width:26px; height:26px; border-radius:7px; background:var(--grad); display:flex; align-items:center; justify-content:center; font-size:.85rem; }
+    .ft-desc { color:rgba(245,243,240,.4); font-size:.84rem; line-height:1.7; max-width:280px; margin-bottom:22px; }
+    .ft-ch { font-family:var(--mono); font-size:.68rem; font-weight:500; color:rgba(245,243,240,.3); text-transform:uppercase; letter-spacing:.12em; margin-bottom:14px; }
+    .ft-links { list-style:none; display:flex; flex-direction:column; gap:9px; }
+    .ft-links a { color:rgba(245,243,240,.5); text-decoration:none; font-size:.85rem; transition:color .25s; }
+    .ft-links a:hover { color:#fff; }
+    .ft-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; padding-top:24px; border-top:1px solid rgba(255,255,255,.07); }
+    .ft-copy { color:rgba(245,243,240,.25); font-size:.78rem; }
+    .ft-tag { font-family:var(--mono); font-size:.7rem; color:rgba(245,243,240,.25); }
+    .ft-tag span { color:var(--fig-purple); }
+
+    @media(max-width:768px){ .sec{padding:64px 0;} }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="wrap">
+    <div class="nav-row">
+      <a href="#" class="logo" aria-label="JustAcademy Figma Training">
+        <div class="logo-icon" aria-hidden="true">✦</div>
+        JustAcademy Figma
+      </a>
+      <a href="https://www.justacademy.co/register-for-course-demo" class="nav-cta" target="_blank" rel="noopener noreferrer">Free Demo →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top" role="banner">
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+  <div class="hero-canvas" aria-hidden="true"><div class="canvas-inner"></div></div>
+
+  <!-- Floating UI frames -->
+  <div class="float-frames" aria-hidden="true">
+    <div class="ui-frame uf-main">
+      <div class="uf-label">// app-home.fig</div>
+      <div class="uf-bar"></div>
+      <div class="uf-rect"></div>
+      <div class="uf-row">
+        <div class="uf-dot" style="background:var(--fig-purple);"></div>
+        <div class="uf-line"></div>
+      </div>
+      <div class="uf-row">
+        <div class="uf-dot" style="background:var(--fig-green);"></div>
+        <div class="uf-line s"></div>
+      </div>
+      <div class="uf-btns">
+        <div class="uf-btn p"></div>
+        <div class="uf-btn s"></div>
+      </div>
+    </div>
+    <div class="ui-frame uf-mini">
+      <div class="uf-label">// component</div>
+      <div class="uf-avatar"></div>
+      <div class="uf-row"><div class="uf-line"></div></div>
+      <div class="uf-row"><div class="uf-line s"></div></div>
+      <div class="uf-tag">Variant A</div>
+    </div>
+    <div class="ui-frame uf-chip">
+      <div class="uf-label">// prototype</div>
+      <div style="font-size:1.6rem;text-align:center;padding:4px 0;">▶</div>
+      <div class="uf-bar" style="width:100%;margin-top:8px;"></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <div class="badge-ring" aria-hidden="true"></div>
+        figma · ui/ux design · 2026
+      </div>
+      <h1>
+        <span class="h1-block">Design.</span>
+        <span class="h1-outline">Prototype.</span>
+        <span class="h1-grad">Ship.</span>
+      </h1>
+      <p class="hero-desc">Master Figma from frames to design systems. Learn wireframing, auto layout, prototyping, components, and the complete UI/UX process used at top product companies — live training in Delhi and globally online.</p>
+      <div class="hero-btns">
+        <a href="https://www.justacademy.co/course-detail/figma-training" class="btn-prim" target="_blank" rel="noopener noreferrer">🌐 Global Course</a>
+        <a href="https://www.justacademy.co/course-detail/delhi/figma-training-in-delhi" class="btn-sec" target="_blank" rel="noopener noreferrer">📍 Delhi Course</a>
+      </div>
+      <div class="hero-stats" aria-label="Course highlights">
+        <div><div class="sv">1</div><div class="sl">Tool Mastered</div></div>
+        <div><div class="sv">6+</div><div class="sl">Real Projects</div></div>
+        <div><div class="sv">Live</div><div class="sl">Sessions</div></div>
+        <div><div class="sv">Delhi</div><div class="sl">&amp; Global</div></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SEC 1: WHAT IS FIGMA -->
+<section class="sec" id="about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eye">Foundation</span>
+      <h2 class="ttl" id="about-h">What is <em>Figma</em>?</h2>
+      <p class="sub">Figma is the world's leading collaborative UI/UX design tool — used by product designers, developers, and teams at Google, Microsoft, Airbnb, and thousands of startups worldwide.</p>
+    </div>
+    <div class="g4">
+      <article class="card rv d1">
+        <div class="ci">🖥️</div>
+        <h3 class="ct">Browser-Based Design</h3>
+        <p class="cx">Figma runs entirely in the browser — no installation, no version conflicts. Open your file on any device and pick up exactly where you left off, anywhere in the world.</p>
+      </article>
+      <article class="card rv d2">
+        <div class="ci">🤝</div>
+        <h3 class="ct">Real-Time Collaboration</h3>
+        <p class="cx">Multiple designers, developers, and stakeholders can work on the same file simultaneously. Comments, cursor presence, and live editing make Figma the Google Docs of design.</p>
+      </article>
+      <article class="card rv d3">
+        <div class="ci">🧩</div>
+        <h3 class="ct">Components &amp; Design Systems</h3>
+        <p class="cx">Build reusable components with variants, auto layout, and properties. Create a design system once and propagate changes across every screen in a single click.</p>
+      </article>
+      <article class="card rv d4">
+        <div class="ci">⚡</div>
+        <h3 class="ct">Prototype &amp; Handoff</h3>
+        <p class="cx">Turn static screens into interactive prototypes with smart animations and transitions. Dev Mode gives developers precise CSS, spacing, and asset exports — zero guessing.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 2: DESIGN PROCESS -->
+<section class="sec sec-alt" id="process" aria-labelledby="proc-h">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;">
+      <span class="eye">Workflow</span>
+      <h2 class="ttl" id="proc-h">The <em>UI/UX Design Process</em> You'll Master</h2>
+      <p class="sub" style="margin:0 auto 48px;">Every professional designer follows this process. You will practise all five stages with real briefs.</p>
+    </div>
+    <div class="process-row rv" role="list">
+      <div class="process-step" role="listitem">
+        <div class="ps-num">01</div>
+        <span class="ps-icon">🔍</span>
+        <div class="ps-title">Research</div>
+        <div class="ps-text">User interviews, competitive analysis, personas, and empathy maps to define the real problem.</div>
+        <div class="ps-bar bar-1"></div>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="ps-num">02</div>
+        <span class="ps-icon">✏️</span>
+        <div class="ps-title">Wireframing</div>
+        <div class="ps-text">Low-fidelity layouts, information architecture, and user flows before any visual decisions.</div>
+        <div class="ps-bar bar-2"></div>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="ps-num">03</div>
+        <span class="ps-icon">🎨</span>
+        <div class="ps-title">Visual Design</div>
+        <div class="ps-text">High-fidelity screens, colour systems, typography, spacing, and pixel-perfect components.</div>
+        <div class="ps-bar bar-3"></div>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="ps-num">04</div>
+        <span class="ps-icon">▶️</span>
+        <div class="ps-title">Prototyping</div>
+        <div class="ps-text">Clickable prototypes with transitions, overlays, and device previews for stakeholder review.</div>
+        <div class="ps-bar bar-4"></div>
+      </div>
+      <div class="process-step" role="listitem">
+        <div class="ps-num">05</div>
+        <span class="ps-icon">🚀</span>
+        <div class="ps-title">Handoff</div>
+        <div class="ps-text">Dev Mode exports, asset delivery, spacing specs, and collaboration with engineering teams.</div>
+        <div class="ps-bar bar-5"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 3: ROADMAP -->
+<section class="sec" id="roadmap" aria-labelledby="rm-h">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;">
+      <span class="eye">Curriculum</span>
+      <h2 class="ttl" id="rm-h">Figma <em>Learning Roadmap</em></h2>
+      <p class="sub" style="margin:0 auto 52px;">A structured path from zero design experience to building and presenting a professional UI/UX portfolio.</p>
+    </div>
+    <div class="rm-outer rv">
+      <div class="rm-wrap" role="list" aria-label="Figma learning roadmap">
+        <div class="rm-node" role="listitem">🧠 UI/UX Design Fundamentals</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">🖥️ Figma Interface &amp; Tools</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">📐 Frames, Grids &amp; Layout</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">✏️ Wireframing &amp; User Flows</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">🎨 Typography &amp; Colour Systems</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">🧩 Components &amp; Variants</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">📏 Auto Layout &amp; Responsive Design</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">▶️ Prototyping &amp; Micro-interactions</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">🏗️ Design Systems</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">🔗 Dev Mode &amp; Handoff</div>
+        <div class="rm-conn" aria-hidden="true"></div>
+        <div class="rm-node" role="listitem">💼 Portfolio &amp; Case Studies</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 4: TOOLS -->
+<section class="sec sec-alt" id="tools" aria-labelledby="tools-h">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eye">Toolkit</span>
+      <h2 class="ttl" id="tools-h">Tools &amp; Skills <em>You'll Learn</em></h2>
+      <p class="sub">Figma is the core, but great designers also know the surrounding toolset for research, handoff, and collaboration.</p>
+    </div>
+    <div class="tools-grid">
+      <div class="tp rv d1"><div class="te">✦</div><div class="tn">Figma</div><div class="tr">Core Design</div></div>
+      <div class="tp rv d1"><div class="te">🧩</div><div class="tn">FigJam</div><div class="tr">Whiteboard</div></div>
+      <div class="tp rv d2"><div class="te">📐</div><div class="tn">Auto Layout</div><div class="tr">Responsive</div></div>
+      <div class="tp rv d2"><div class="te">🎞️</div><div class="tn">Prototyping</div><div class="tr">Interactions</div></div>
+      <div class="tp rv d3"><div class="te">🎨</div><div class="tn">Colour Theory</div><div class="tr">Visual Design</div></div>
+      <div class="tp rv d3"><div class="te">🔡</div><div class="tn">Typography</div><div class="tr">Type Systems</div></div>
+      <div class="tp rv d4"><div class="te">🏗️</div><div class="tn">Design Systems</div><div class="tr">Tokens</div></div>
+      <div class="tp rv d4"><div class="te">👥</div><div class="tn">User Research</div><div class="tr">UX Methods</div></div>
+      <div class="tp rv d1"><div class="te">🔗</div><div class="tn">Dev Mode</div><div class="tr">Handoff</div></div>
+      <div class="tp rv d2"><div class="te">📊</div><div class="tn">Maze / UsabilityHub</div><div class="tr">User Testing</div></div>
+      <div class="tp rv d3"><div class="te">📦</div><div class="tn">Notion</div><div class="tr">Documentation</div></div>
+      <div class="tp rv d4"><div class="te">💼</div><div class="tn">Behance / Dribbble</div><div class="tr">Portfolio</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 5: PROJECTS -->
+<section class="sec" id="projects" aria-labelledby="proj-h">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eye">Portfolio Work</span>
+      <h2 class="ttl" id="proj-h">Real <em>Design Projects</em> You'll Build</h2>
+      <p class="sub">Every project becomes a case study for your Behance and Dribbble portfolio — the currency of UI/UX job applications.</p>
+    </div>
+    <div class="proj-grid">
+      <article class="proj rv d1">
+        <div class="proj-color-bar" style="background:linear-gradient(90deg,#9b51e0,#7c3aed);" aria-hidden="true"></div>
+        <div class="pbadge">Mobile App</div>
+        <h3 class="pt">Food Delivery App UI</h3>
+        <p class="pd">Design a full food ordering app from onboarding to checkout — home, restaurant listing, menu, cart, and order tracking screens with a complete design system.</p>
+        <div class="ptags"><span>Wireframes</span><span>Auto Layout</span><span>Components</span><span>Prototype</span></div>
+      </article>
+      <article class="proj rv d2">
+        <div class="proj-color-bar" style="background:linear-gradient(90deg,#f24e1e,#ff7262);" aria-hidden="true"></div>
+        <div class="pbadge">SaaS / Web</div>
+        <h3 class="pt">Dashboard Design</h3>
+        <p class="pd">Create a data-rich SaaS analytics dashboard with charts, tables, navigation, and dark/light mode. Practise complex responsive layouts with auto layout.</p>
+        <div class="ptags"><span>Grids</span><span>Dark Mode</span><span>Data Viz</span><span>Responsive</span></div>
+      </article>
+      <article class="proj rv d3">
+        <div class="proj-color-bar" style="background:linear-gradient(90deg,#0acf83,#1bc47d);" aria-hidden="true"></div>
+        <div class="pbadge">E-Commerce</div>
+        <h3 class="pt">Shopping App Redesign</h3>
+        <p class="pd">Redesign an existing e-commerce app with improved UX — fix real pain points discovered through user research, then prototype and test the improved flows.</p>
+        <div class="ptags"><span>UX Research</span><span>Redesign</span><span>Usability</span><span>Testing</span></div>
+      </article>
+      <article class="proj rv d1">
+        <div class="proj-color-bar" style="background:linear-gradient(90deg,#3b82f6,#06b6d4);" aria-hidden="true"></div>
+        <div class="pbadge">Design System</div>
+        <h3 class="pt">Component Library</h3>
+        <p class="pd">Build a complete design system from scratch — buttons, inputs, cards, navigation, modals, and typography with variants, states, and documentation for developers.</p>
+        <div class="ptags"><span>Components</span><span>Variants</span><span>Tokens</span><span>Dev Mode</span></div>
+      </article>
+      <article class="proj rv d2">
+        <div class="proj-color-bar" style="background:linear-gradient(90deg,#f59e0b,#fbbf24);" aria-hidden="true"></div>
+        <div class="pbadge">Landing Page</div>
+        <h3 class="pt">SaaS Product Website</h3>
+        <p class="pd">Design a high-converting product landing page with hero, features, pricing, testimonials, and CTA — fully responsive across desktop, tablet, and mobile breakpoints.</p>
+        <div class="ptags"><span>Web Design</span><span>Responsive</span><span>Auto Layout</span><span>Handoff</span></div>
+      </article>
+      <article class="proj rv d3">
+        <div class="proj-color-bar" style="background:var(--grad);" aria-hidden="true"></div>
+        <div class="pbadge">Capstone</div>
+        <h3 class="pt">End-to-End UX Case Study</h3>
+        <p class="pd">A complete UX project from discovery to delivery — user research, persona, wireframes, high-fidelity UI, prototype, usability testing, and a written case study for your portfolio.</p>
+        <div class="ptags"><span>Full Process</span><span>Research</span><span>Testing</span><span>Case Study</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 6: CAREER — BENTO -->
+<section class="sec sec-alt" id="career" aria-labelledby="career-h">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;">
+      <span class="eye">Outcomes</span>
+      <h2 class="ttl" id="career-h">Where a <em>Figma Portfolio</em> Takes You</h2>
+      <p class="sub" style="margin:0 auto 48px;">UI/UX design is one of the highest-paid, most transferable skills in tech. Here are the roles waiting for you.</p>
+    </div>
+    <div class="bento rv" role="list">
+      <div class="bento-cell" role="listitem">
+        <span class="bc-level lv-e">Entry</span>
+        <div class="bc-role">UI/UX Design Intern</div>
+        <div class="bc-desc" style="color:var(--t2);">Create wireframes, assist on design systems, document UX flows, and build your first real product portfolio pieces under senior mentorship.</div>
+      </div>
+      <div class="bento-cell" role="listitem">
+        <span class="bc-level lv-e">Junior</span>
+        <div class="bc-role">Product Designer</div>
+        <div class="bc-desc" style="color:var(--t2);">Own features from wireframe to handoff. Collaborate daily with PMs, developers, and stakeholders in agile sprints.</div>
+      </div>
+      <div class="bento-cell accent" role="listitem">
+        <span class="bc-level" style="background:rgba(155,81,224,.3);color:#d8b4fe;">Salary Range</span>
+        <div class="bc-role" style="color:#fff;">India 2026</div>
+        <div class="bc-sal">₹4–45 LPA</div>
+        <div class="bc-desc bc-desc-light" style="font-size:.8rem;">Entry to senior across tier-1 companies</div>
+      </div>
+      <div class="bento-cell wide" role="listitem">
+        <span class="bc-level lv-m">Senior</span>
+        <div class="bc-role">Senior UI/UX Designer</div>
+        <div class="bc-desc" style="color:var(--t2);">Lead product design strategy, define design languages, conduct user research, mentor junior designers, and represent design thinking at the leadership level. Companies like Swiggy, Meesho, Razorpay, and Zepto actively hire at this level from Delhi NCR.</div>
+      </div>
+      <div class="bento-cell" role="listitem">
+        <span class="bc-level lv-s">Specialist</span>
+        <div class="bc-role">UX Researcher</div>
+        <div class="bc-desc" style="color:var(--t2);">Run usability studies, conduct interviews, and translate qualitative insights into design decisions that improve conversion and retention.</div>
+      </div>
+      <div class="bento-cell" role="listitem">
+        <span class="bc-level lv-l">Lead</span>
+        <div class="bc-role">Design Lead / Head of Design</div>
+        <div class="bc-desc" style="color:var(--t2);">Own the design function, build and manage design teams, set visual standards, and align product design with business strategy.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 7: BLOG -->
+<section class="sec" id="blog" aria-labelledby="blog-h">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eye">Featured Read</span>
+      <h2 class="ttl" id="blog-h">From Our <em>Blog</em></h2>
+    </div>
+    <div class="blog-wrap rv">
+      <div class="blog-main">
+        <div class="blog-chip">📖 Complete Guide · June 2026</div>
+        <h3 class="blog-h">What Is Figma and How Does It Work? A Complete Guide to Modern UI/UX Design in 2026</h3>
+        <p class="blog-p">A comprehensive guide to Figma's role in modern product design — from its real-time collaboration features and component architecture to design systems, Dev Mode handoff, and why every aspiring designer and frontend developer should be fluent in Figma in 2026.</p>
+        <div class="blog-meta">Published June 26, 2026 · JustAcademy Blog · 15 min read</div>
+        <a href="https://justacademy4.wordpress.com/2026/06/26/what-is-figma-and-how-does-it-work-a-complete-guide-to-modern-ui-ux-design-in-2026-2/" class="btn-prim" target="_blank" rel="noopener noreferrer" style="display:inline-flex;">Read the Guide →</a>
+      </div>
+      <div class="blog-side" aria-hidden="true">
+        <div class="blog-icon">✦</div>
+        <div class="blog-tag">// figma_ux_guide_2026.md</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC 8: FAQ -->
+<section class="sec sec-alt" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eye">FAQ</span>
+      <h2 class="ttl" id="faq-h">Questions <em>Answered</em></h2>
+      <p class="sub">Everything prospective students ask before joining the Figma UI/UX training program.</p>
+    </div>
+    <div class="faq-stack rv" role="list">
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false" aria-controls="f1">What is Figma and why is it the industry standard in 2026?<span class="faq-ico">+</span></button>
+        <div class="faq-body" id="f1">Figma is a browser-based collaborative design tool used by product teams worldwide to design, prototype, and hand off UI/UX work. In 2026, Figma is the default tool at Google, Microsoft, Airbnb, Stripe, and virtually every funded startup. Its real-time collaboration, powerful component system, and Dev Mode handoff make it the single tool that bridges design and engineering — making Figma fluency a non-negotiable skill for modern designers.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false" aria-controls="f2">Do I need any design or technical background to learn Figma?<span class="faq-ico">+</span></button>
+        <div class="faq-body" id="f2">No prior design or technical background is needed. Figma is approachable for complete beginners — it runs in any browser and its interface is intuitive to pick up. JustAcademy's course starts from UI/UX fundamentals before moving into Figma tools, ensuring students with no design experience build both the theory and hands-on skills to work professionally.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false" aria-controls="f3">What is the difference between UI design and UX design?<span class="faq-ico">+</span></button>
+        <div class="faq-body" id="f3">UX (User Experience) design focuses on how a product feels — the user journey, information architecture, usability, and problem-solving. UI (User Interface) design focuses on how a product looks — visual hierarchy, typography, colour, spacing, and pixel-perfect screens. In practice, most roles require both skill sets, and Figma is the primary tool for both. JustAcademy's course covers the full UI/UX process end to end.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false" aria-controls="f4">How long does it take to learn Figma and get a design job?<span class="faq-ico">+</span></button>
+        <div class="faq-body" id="f4">Most students become proficient in Figma within 4-6 weeks of daily practice. Building a job-ready portfolio of 3-5 case studies — which JustAcademy's course is designed to produce — takes approximately 3-4 months. Students who complete the full course and portfolio consistently receive interview calls within 2-3 months of graduating.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false" aria-controls="f5">What salary can a UI/UX designer expect in Delhi in 2026?<span class="faq-ico">+</span></button>
+        <div class="faq-body" id="f5">In Delhi NCR, entry-level UI/UX designers earn ₹4-7 LPA at startups and agencies. Mid-level designers with a strong portfolio earn ₹12-22 LPA. Senior designers and design leads at funded startups and product companies earn ₹25-45+ LPA. Globally, product designers in the US earn $90,000-$160,000 annually. UI/UX is consistently ranked among the most in-demand and well-compensated tech-adjacent skills.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false" aria-controls="f6">Is the Delhi Figma course online or classroom-based?<span class="faq-ico">+</span></button>
+        <div class="faq-body" id="f6">Both the Delhi course and the global course are fully online, delivered as live interactive sessions. You attend from home, get real-time instruction, ask questions during class, and work on projects with peer feedback. The curriculum, projects, and outcomes are identical across both offerings — the Delhi label simply reflects the instructor's local context and batch timing.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false" aria-controls="f7">Does the course cover design systems and component libraries?<span class="faq-ico">+</span></button>
+        <div class="faq-body" id="f7">Yes — design systems are a core part of the curriculum. You will learn to build reusable components with variants and properties, create a token-based colour and typography system, organise a shared component library, and document it for developer handoff. Design system skills are among the most valued by hiring teams at product companies because they scale design across large products.</div>
+      </div>
+      <div class="faq-item" role="listitem">
+        <button class="faq-btn" aria-expanded="false" aria-controls="f8">Will I get a portfolio and placement help after the course?<span class="faq-ico">+</span></button>
+        <div class="faq-body" id="f8">Yes. JustAcademy's Figma course is project-driven — by the time you complete it, you will have 5-6 real design projects and full case studies to publish on Behance, Dribbble, and your portfolio website. Placement support includes resume and portfolio reviews, LinkedIn profile optimisation, mock design critique sessions, and referrals to JustAcademy's hiring partner network.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec cta-sec" id="enroll" aria-labelledby="cta-h">
+  <div class="cta-glow cta-glow-a" aria-hidden="true"></div>
+  <div class="cta-glow cta-glow-b" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="cta-inner rv">
+      <span class="eye" style="border-color:rgba(155,81,224,.3);background:rgba(155,81,224,.12);color:#d8b4fe;">Start Designing</span>
+      <h2 class="cta-h" id="cta-h">Open Figma.<br/><em>Start Your Career.</em></h2>
+      <p class="cta-sub">Live Figma training, 6 real portfolio projects, expert mentors, and placement support. Delhi and global batches enrolling now.</p>
+      <div class="cta-btns">
+        <a href="https://www.justacademy.co/course-detail/figma-training" class="btn-cta-prim" target="_blank" rel="noopener noreferrer">🌐 Global Course — Enroll Now</a>
+        <a href="https://www.justacademy.co/course-detail/delhi/figma-training-in-delhi" class="btn-cta-sec" target="_blank" rel="noopener noreferrer">📍 Delhi Course — Enroll Now</a>
+      </div>
+      <p class="cta-note">🎓 Free Demo Available · 📄 Download Brochure · 📞 Talk to a Mentor</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <div class="ft-brand">
+          <div class="ft-logo-icon" aria-hidden="true">✦</div>
+          JustAcademy Figma
+        </div>
+        <p class="ft-desc">India's trusted live training institute for UI/UX and Figma design. Real projects, portfolio-first curriculum, and placement support for aspiring designers in Delhi and beyond.</p>
+        <a href="https://www.justacademy.co/register-for-course-demo" class="btn-cta-prim" target="_blank" rel="noopener noreferrer" style="font-size:.82rem;padding:11px 22px;display:inline-flex;margin-top:4px;">Book Free Demo</a>
+      </div>
+      <div>
+        <div class="ft-ch">Quick Links</div>
+        <ul class="ft-links">
+          <li><a href="https://www.justacademy.co/" target="_blank" rel="noopener noreferrer">JustAcademy Website</a></li>
+          <li><a href="https://www.justacademy.co/register-for-course-demo" target="_blank" rel="noopener noreferrer">Free Demo Class</a></li>
+          <li><a href="https://www.justacademy.co/download-general-brochure" target="_blank" rel="noopener noreferrer">Download Brochure</a></li>
+          <li><a href="https://justacademy4.wordpress.com/2026/06/26/what-is-figma-and-how-does-it-work-a-complete-guide-to-modern-ui-ux-design-in-2026-2/" target="_blank" rel="noopener noreferrer">Featured Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-ch">Courses</div>
+        <ul class="ft-links">
+          <li><a href="https://www.justacademy.co/course-detail/figma-training" target="_blank" rel="noopener noreferrer">Figma Training — Global</a></li>
+          <li><a href="https://www.justacademy.co/course-detail/delhi/figma-training-in-delhi" target="_blank" rel="noopener noreferrer">Figma Training — Delhi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <p class="ft-copy">© 2026 JustAcademy. All rights reserved.</p>
+      <p class="ft-tag">built for <span>UI/UX designers</span> in Delhi &amp; worldwide</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // scroll reveal
+  const rvEls = document.querySelectorAll('.rv');
+  const rvObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); rvObs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -28px 0px' });
+  rvEls.forEach(el => rvObs.observe(el));
+
+  // roadmap sequential
+  const rmNodes = document.querySelectorAll('.rm-node');
+  const rmObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        rmNodes.forEach((n,i) => setTimeout(() => { n.style.opacity='1'; n.style.transform='none'; }, i*90));
+        rmObs.disconnect();
+      }
+    });
+  }, { threshold: 0.1 });
+  if(rmNodes.length){
+    rmNodes.forEach(n => { n.style.transition='opacity .4s ease, transform .4s ease, border-color .3s, background .3s, color .3s, box-shadow .3s'; });
+    const rmEl = document.querySelector('.rm-outer');
+    if(rmEl) rmObs.observe(rmEl);
+  }
+
+  // faq
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+    btn.addEventListener('click', function(){
+      const item = this.closest('.faq-item');
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-btn').setAttribute('aria-expanded','false'); });
+      if(!open){ item.classList.add('open'); this.setAttribute('aria-expanded','true'); }
+    });
+  });
+
+  // nav shadow
+  window.addEventListener('scroll', () => {
+    document.querySelector('nav').style.boxShadow = window.scrollY > 50 ? '0 4px 24px rgba(0,0,0,.1)' : 'none';
+  }, { passive: true });
+</script>
+</body>
+</html>
